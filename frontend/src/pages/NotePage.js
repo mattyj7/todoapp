@@ -29,9 +29,16 @@ const NotePage = () => {
   };
 
   return (
-    <div>
-      <p>{note?.body}</p>
-      <p>Date Created: {note ? formatDate(note.created) : ""}</p>
+    <div className="note">
+      <div class="note-title">
+        <h1>{note?.title}</h1>
+      </div>
+      <div className="note-body">
+        <p>{note?.body}</p>
+      </div>
+      <div className="note-created">
+        <p>Date Created: {note ? formatDate(note.created) : ""}</p>
+      </div>
     </div>
   );
 };

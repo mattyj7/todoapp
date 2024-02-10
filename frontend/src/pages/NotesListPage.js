@@ -15,8 +15,12 @@ const NotesListPage = () => {
   };
 
   return (
-    <div>
-      <div className="notes-dashlist">
+    <div className="notes">
+      <div className="notes-header">
+        <h2 class="notes-title"> &#9782;</h2>
+        <p className="notes-count"> {notes.length} </p>
+      </div>
+      <div className="notes-list">
         {notes.map((note, index) => (
           <ListItem key={index} note={note} />
         ))}

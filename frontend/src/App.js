@@ -8,12 +8,14 @@ import NotePage from "./pages/NotePage";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/notes" exact Component={NotesListPage} />
-          <Route path="/note/:noteId" Component={NotePage} />
-        </Routes>
+      <div className="container dark">
+        <div className="app">
+          <Header />
+          <Routes>
+            <Route path="/notes" exact Component={NotesListPage} />
+            <Route path="/note/:noteId" Component={NotePage} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
