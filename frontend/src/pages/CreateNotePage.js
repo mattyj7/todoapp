@@ -37,7 +37,8 @@ const CreateNotePage = () => {
       </div>
       <div className="note-title">
         <textarea
-          className="create-textarea"
+          className="create-textarea-title"
+          placeholder="What will you call it?"
           onChange={(e) => {
             setNote({ ...note, title: e.target.value });
           }}
@@ -46,6 +47,7 @@ const CreateNotePage = () => {
       <div className="note-body">
         <textarea
           className="create-textarea"
+          placeholder="Type something here..."
           onChange={(e) => {
             setNote({ ...note, body: e.target.value });
           }}
