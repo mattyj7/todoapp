@@ -58,13 +58,13 @@ a {
 }
 
 .app {
+  display: grid;
+  gap: 5rem;
   width: 100%;
-  max-width: 480px;
+  grid-template-columns: 1fr 3fr;
   height: 88vh;
-  margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
 }
 
 .app-header {
@@ -100,7 +100,15 @@ a {
   padding: 16px;
 }
 
+.app-schedule {
+  background-color: var(--color-main);
+}
+
 /* NOTES STYLES */
+
+.notes {
+  position: relative;
+}
 
 .notes-header {
   display: flex;
@@ -166,11 +174,14 @@ a {
   color: var(--color-main);
 }
 
+.add-button {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
 .floating-button {
   font-size: 48px;
-  position: absolute;
-  bottom: 24px;
-  right: 16px;
   background: var(--color-main);
   border: none;
   width: 60px;
@@ -191,8 +202,9 @@ a {
   fill: var(--color-bg);
 }
 
-.create-textarea {
-  background-color: #1f2124;
+.create-textarea-title {
+  text-align: center;
+  vertical-align: middle;
 }
 
 /*==============================
@@ -247,6 +259,7 @@ a {
 .note textarea:focus {
   outline: none;
   border: none;
+  background-color: var(--color-white);
 }
 
 .note textarea::-webkit-scrollbar {
@@ -264,5 +277,9 @@ a {
 }
 
 .note-title {
+  text-align: center;
+  vertical-align: middle;
+  width: 250px;
+  height: 50px;
   align-self: center;
 }

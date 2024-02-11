@@ -11,12 +11,15 @@ function App() {
     <Router>
       <div className="container dark">
         <div className="app">
-          <Header />
-          <Routes>
-            <Route path="/notes" exact Component={NotesListPage} />
-            <Route path="/note/:noteId" Component={NotePage} />
-            <Route path="/note/create" Component={CreateNotePage} />
-          </Routes>
+          <div className="app-todo">
+            <Header />
+            <Routes>
+              <Route path="/notes" exact Component={NotesListPage} />
+              <Route path="/note/:noteId" Component={NotePage} />
+              <Route path="/note/create" Component={CreateNotePage} />
+            </Routes>
+          </div>
+          <div class="app-schedule">schedule </div>
         </div>
       </div>
     </Router>
