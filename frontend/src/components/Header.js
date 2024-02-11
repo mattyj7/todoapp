@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Link to={`/notes/`}>
-      <h2>Home</h2>
-    </Link>
+    <div class="app-header">
+      <Link to={`/notes/`}>
+        <h1>Note App</h1>
+      </Link>
+    </div>
   );
 };
 

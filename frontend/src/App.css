@@ -13,7 +13,8 @@
 }
 
 .dark {
-  --color-main: #f68657;
+  --color-main: #e5703e;
+  --color-main-highlight: #d15b28;
   --color-text: #d6d1d1;
   --color-dark: #f5f6f7;
   --color-gray: #999;
@@ -160,6 +161,11 @@ a {
   color: var(--color-light);
 }
 
+.last-updated {
+  font-size: 14px;
+  color: var(--color-main);
+}
+
 .floating-button {
   font-size: 48px;
   position: absolute;
@@ -177,8 +183,16 @@ a {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
+.floating-button:hover {
+  background-color: var(--color-main-highlight);
+}
+
 .floating-button > svg {
   fill: var(--color-bg);
+}
+
+.create-textarea {
+  background-color: #1f2124;
 }
 
 /*==============================
@@ -215,6 +229,10 @@ a {
   cursor: pointer;
 }
 
+.delete-btn:hover {
+  color: var(--color-main-highlight);
+}
+
 .note textarea {
   background-color: var(--color-white);
   border: none;
@@ -238,15 +256,11 @@ a {
 .note {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
 }
 
 .note-body {
-  flex-grow: 1;
-}
-
-.note-created {
-  margin-top: auto;
+  flex: 1;
 }
 
 .note-title {
