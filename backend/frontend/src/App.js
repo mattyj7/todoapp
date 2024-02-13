@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import NotesListPage from "./pages/NotesListPage";
 import NotePage from "./pages/NotePage";
 import CreateNotePage from "./pages/CreateNotePage";
+import CalendarPage from "./pages/CalendarPage";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
               <Route path="/note/create" Component={CreateNotePage} />
             </Routes>
           </div>
-          <div class="app-schedule">schedule </div>
+          <CalendarPage />
         </div>
       </div>
     </Router>
