@@ -15,7 +15,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/notes" exact Component={NotesListPage} />
-              <Route path="/note/:noteId" Component={NotePage} />
+              <Route path="/notes/:noteId" Component={NotePage} />
               <Route path="/note/create" Component={CreateNotePage} />
             </Routes>
           </div>

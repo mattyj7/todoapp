@@ -38,7 +38,7 @@ const ListItem = ({ note }) => {
     return lastUpdatedLength;
   };
   return (
-    <Link to={`/note/${note.id}`}>
+    <Link to={`/notes/${note.id}`}>
       <div className="notes-list-item">
         <h3>
           {note.title} <br />

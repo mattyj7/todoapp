@@ -10,7 +10,7 @@ const CreateNotePage = () => {
   useEffect(() => {}, [noteId]);
 
   let createNote = async () => {
-    fetch(`/api/note/create/`, {
+    fetch(`/api/notes/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

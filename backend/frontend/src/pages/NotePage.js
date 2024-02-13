@@ -9,8 +9,8 @@ const NotePage = () => {
 
   useEffect(() => {
     let getNote = async () => {
-      if (noteId === "new") return;
-      let response = await fetch(`/api/note/${noteId}/`);
+      if (noteId === "create") return;
+      let response = await fetch(`/api/notes/${noteId}/`);
       let data = await response.json();
       setNote(data);
     };
@@ -18,7 +18,7 @@ const NotePage = () => {
   }, [noteId]);
 
   let updateNote = async () => {
-    fetch(`/api/note/${noteId}/update/`, {
+    fetch(`/api/notes/${noteId}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const NotePage = () => {
   };
 
   const deleteNote = async () => {
-    fetch(`/api/note/${noteId}/delete/`, {
+    fetch(`/api/notes/${noteId}/`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json,",
