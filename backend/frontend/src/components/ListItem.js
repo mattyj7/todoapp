@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 const ListItem = ({ note }) => {
   const shortenBody = (note) => {
     let content = note.body;
-    console.log(content);
-    console.log(note.body);
     if (content.length > 45) {
       return content.slice(0, 45) + "...";
     } else {
@@ -37,6 +35,7 @@ const ListItem = ({ note }) => {
 
     return lastUpdatedLength;
   };
+
   return (
     <Link to={`/notes/${note.id}`}>
       <div className="notes-list-item">

@@ -6,6 +6,7 @@ import {
   endOfDay,
   eachHourOfInterval,
 } from "date-fns";
+import Draggable from "react-draggable";
 
 const Calendar = () => {
   const today = new Date();
@@ -19,10 +20,12 @@ const Calendar = () => {
       <h2>{format(today, "MMMM yyyy")}</h2>
       <div className="calendar-container">
         {hoursInDay.map((hour, index) => (
-          <div key={index} className="hourly-container">
-            <h1 className="hourly-number">{format(hour, "h:mm a")}</h1>
-            <div className="landing-box"></div>
-          </div>
+          <Draggable>
+            <div key={index} className="hourly-container">
+              <h1 className="hourly-number">{format(hour, "h:mm a")}</h1>
+              <div className="landing-box"></div>
+            </div>
+          </Draggable>
         ))}
       </div>
     </div>
